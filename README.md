@@ -19,6 +19,14 @@ Here’s how the project is organized (so it feels like a real data science work
 
 ---
 
+## 📊 Sample Result
+
+Here’s one example from the analysis — survival by gender:
+
+![Survival by Gender](reports/figures/survival_by_gender.png)
+
+---
+
 ## 🚀 How to Try It Out
 1. Clone the repo:
    ```bash
