@@ -1,6 +1,3 @@
 pandas
 seaborn
 matplotlib
-pandas
-seaborn
-matplotlib
