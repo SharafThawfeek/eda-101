@@ -38,7 +38,7 @@ Raw CSV ➜ **02_cleaning** ➜ `data/processed/titanic_clean.csv` ➜ **03_mode
 ## ▶️ Run locally (optional)
 
 ```bash
-git clone git@github.com:<YOUR_USERNAME>/eda-101.git
+git clone git@github.com:SharafThawfeek/eda-101.git
 cd eda-101
 pip install -r requirements.txt
 # open notebooks/ and run 01 → 04 in order
