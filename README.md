@@ -1,34 +1,44 @@
-# EDA-101: Exploratory Data Analysis Project
+## 🧪 Pipeline Overview
 
-Welcome! 👋  
-This is my first project in a series where I practice **exploratory data analysis (EDA)** — the process of looking at a dataset, asking questions, and using visualizations to find insights.  
+Raw CSV ➜ **02_cleaning** ➜ `data/processed/titanic_clean.csv` ➜ **03_modeling** (features, train/test, evaluate) ➜ **04_results** (metrics + figures)
 
-Think of this repo as a small case study that shows how I approach data: from raw files, to cleaned versions, to notebooks full of charts, and finally to clear takeaways.
-
----
-
-## 📂 Project Layout
-Here’s how the project is organized (so it feels like a real data science workflow):
-
-- **data/raw/** → the original dataset (always kept untouched)  
-- **data/processed/** → cleaned or transformed data, ready for analysis  
-- **notebooks/** → Jupyter notebooks where the analysis and visualizations live  
-- **reports/figures/** → saved charts and plots for quick viewing  
-- **src/** → helper Python code (functions, scripts, etc.)  
-- **tests/** → small tests to make sure the code runs correctly  
+**Notebooks**
+- [`01_eda.ipynb`](notebooks/01_eda.ipynb) – first look, questions, basic visuals  
+- [`02_cleaning.ipynb`](notebooks/02_cleaning.ipynb) – handle missing values, save cleaned CSV  
+- [`03_modeling.ipynb`](notebooks/03_modeling.ipynb) – features, Logistic Regression, metrics  
+- [`04_results.ipynb`](notebooks/04_results.ipynb) – present metrics & figures
 
 ---
 
-## 📊 Sample Result
+## ✅ Model Results (test set)
 
-Here’s one example from the analysis — survival by gender:
+**Metrics**
 
-![Survival by Gender](reports/figures/survival_by_gender.png)
+| accuracy | precision | recall | f1 |
+|---------:|----------:|-------:|---:|
+| 0.780 | 0.760 | 0.710 | 0.730 |
+
+> Replace the numbers above with yours from `reports/metrics.json` (or paste the auto-generated table printed in `04_results.ipynb`).
+
+**Confusion Matrix**
+
+![Confusion Matrix](reports/figures/confusion_matrix.png)
 
 ---
 
-## 🚀 How to Try It Out
-1. Clone the repo:
-   ```bash
-   git clone git@github.com:SharafThawfeek/eda-101.git
-   cd eda-101
+## 🔧 What’s inside (short)
+
+- **Cleaning choices:** `Age` → median impute; `Embarked` → mode; drop very sparse `Cabin`.  
+- **Features:** `Pclass`, `Sex` (encoded), `Age`, `Fare`, `FamilySize`, `Embarked_*`.  
+- **Model:** Logistic Regression baseline (simple, readable).  
+- **Artifacts:** `reports/metrics.json`, figures in `reports/figures/`.
+
+---
+
+## ▶️ Run locally (optional)
+
+```bash
+git clone git@github.com:<YOUR_USERNAME>/eda-101.git
+cd eda-101
+pip install -r requirements.txt
+# open notebooks/ and run 01 → 04 in order
